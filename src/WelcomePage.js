@@ -39,11 +39,6 @@ const useStyles = makeStyles(theme => ({
     alignSelf:"center",
     display:"flex",
     justifyContent:"space-between"
-  },
-  downButton:{
-    marginTop:"100px",
-    width:"50px",
-    alignSelf:"center",
   }
 }));
 
@@ -74,7 +69,6 @@ function WelcomePage() {
             <Link href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram style={{color:"white"}} fontSize="large"/> </Link>
             <Link href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn style={{color:"white"}}  fontSize="large" /></Link>
         </div>
-        <Button className={classes.downButton} ><KeyboardArrowDownRounded style={{color:"white"}} fontSize="large"/></Button>
       </div>
     </div>
   );
