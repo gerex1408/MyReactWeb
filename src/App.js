@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className={classes.root}>
-      <WelcomePage/>
+      <WelcomePage id="home"/>
     </div>
   );
 }
