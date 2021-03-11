@@ -2,9 +2,9 @@ import React from 'react';
 import Navbar from './Navbar';
 import myPhoto from './me.jpeg';
 import {makeStyles} from '@material-ui/core/styles';
-import { Typography,Link } from '@material-ui/core';
+import { Typography,Link,Button } from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
-import {GitHub,Instagram,LinkedIn} from '@material-ui/icons';
+import {GitHub,Instagram,LinkedIn,KeyboardArrowDownRounded, KeyboardArrowDownOutlined} from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -39,6 +39,11 @@ const useStyles = makeStyles(theme => ({
     alignSelf:"center",
     display:"flex",
     justifyContent:"space-between"
+  },
+  downButton:{
+    marginTop:"100px",
+    width:"50px",
+    alignSelf:"center",
   }
 }));
 
@@ -69,6 +74,7 @@ function WelcomePage() {
             <Link href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram style={{color:"white"}} fontSize="large"/> </Link>
             <Link href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn style={{color:"white"}}  fontSize="large" /></Link>
         </div>
+        <Button className={classes.downButton} ><KeyboardArrowDownRounded style={{color:"white"}} fontSize="large"/></Button>
       </div>
     </div>
   );
