@@ -1,5 +1,5 @@
-import React from 'react';
-import {AppBar,Toolbar,Typography,Button,useMediaQuery,IconButton,MenuItem,Menu} from '@material-ui/core';
+import {React, useState} from 'react';
+import {AppBar,Toolbar,Typography,Button,useMediaQuery,IconButton,MenuItem,Menu, Link} from '@material-ui/core';
 import { createMuiTheme, responsiveFontSizes, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import {useSpring, animated} from 'react-spring';
@@ -28,14 +28,20 @@ theme = responsiveFontSizes(theme);
 
 function Navbar() {
 
+
   const m_size = useMediaQuery('(min-width:1024px)');
   const s_size = useMediaQuery('(min-width:768px)');
   const xs_size = useMediaQuery('(min-width:425px)');
 
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+  const [aboutMe,setAboutMe]=useState(window.location.pathname==="/"?true:false);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
+  };
+
+  const handleClickAboutMe=()=>{
+    if(!aboutMe)window.location="/";
   };
 
   const handleClose = () => {
@@ -57,7 +63,7 @@ function Navbar() {
             {
               m_size?(
                 <nav>
-                  <Button className={classes.menuButton} color="inherit">About me</Button>
+                  <Button className={classes.menuButton} onClick={handleClickAboutMe} color="inherit" style={aboutMe&&{color:"#ff4c4c"}}>About me</Button>
                   <Button className={classes.menuButton} color="inherit">Job experience</Button>
                   <Button className={classes.menuButton} color="inherit">Studies</Button>
                   <Button className={classes.menuButton} color="inherit">Skills</Button>
