@@ -51,7 +51,8 @@ function WelcomePage() {
 
   const classes = useStyles();
   const props = useSpring({to:{opacity: 1,marginLeft:0}, from: {opacity: 0,marginLeft:-500},config: {delay:1000,duration:1000}})
-  const props2 = useSpring({to:{opacity: 1,marginTop:0}, from: {opacity: 0,marginTop:500},config: {delay:1000,duration:1000}})
+  const props2 = useSpring({to:{opacity: 1,marginTop:0}, from: {opacity: 0,marginTop:200},config: {delay:1000,duration:1000}})
+  const props3 = useSpring({to:{opacity: 1}, from: {opacity: 0},config: {delay:1000,duration:1000}})
 
   return (
     <div className={classes.root}>
@@ -67,11 +68,11 @@ function WelcomePage() {
             </Typography>
         </animated.div>
 
-        <div className={classes.socialIcons}>
+        <animated.div style={props3} className={classes.socialIcons}>
             <Link href="https://github.com/gerex1408" target="_blank" rel="noopener"><GitHub className={classes.icon} fontSize="large"/></Link>
             <Link href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram className={classes.icon} fontSize="large"/> </Link>
             <Link href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn className={classes.icon}  fontSize="large" /></Link>
-        </div>
+        </animated.div>
       </div>
     </div>
   );
