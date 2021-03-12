@@ -1,15 +1,14 @@
-import React from 'react';
-import Navbar from './Navbar';
+import {React} from 'react';
 import myPhoto from './me.jpeg';
 import {makeStyles} from '@material-ui/core/styles';
-import { Typography,Link,Button } from '@material-ui/core';
+import { Typography,Link} from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
-import {GitHub,Instagram,LinkedIn,KeyboardArrowDownRounded, KeyboardArrowDownOutlined} from '@material-ui/icons';
+import {GitHub,Instagram,LinkedIn} from '@material-ui/icons';
 
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1,
-    height:"100vh",
+    height:"90vh",
     backgroundColor:"#000",
   },
   figure:{
@@ -23,7 +22,7 @@ const useStyles = makeStyles(theme => ({
   },
   presentation: {
       textAlign:"center",
-      height:"88vh",
+      height:"100%",
       display:"flex",
       flexDirection:"column",
       justifyContent:"flex-start"
@@ -39,6 +38,12 @@ const useStyles = makeStyles(theme => ({
     alignSelf:"center",
     display:"flex",
     justifyContent:"space-between"
+  },
+  icon:{
+    color:"#fff",
+    '&:hover':{
+      color:"#ff4c4c"
+    }
   }
 }));
 
@@ -48,10 +53,8 @@ function WelcomePage() {
   const props = useSpring({to:{opacity: 1,marginLeft:0}, from: {opacity: 0,marginLeft:-500},config: {delay:1000,duration:1000}})
   const props2 = useSpring({to:{opacity: 1,marginTop:0}, from: {opacity: 0,marginTop:500},config: {delay:1000,duration:1000}})
 
-
   return (
     <div className={classes.root}>
-      <Navbar/>
       <div className={classes.presentation}>
         <animated.div  className={classes.figure} style={props}>
             <img className={classes.img} src={myPhoto} alt="Me" />
@@ -65,12 +68,13 @@ function WelcomePage() {
         </animated.div>
 
         <div className={classes.socialIcons}>
-            <Link href="https://github.com/gerex1408" target="_blank" rel="noopener"><GitHub style={{color:"white"}} fontSize="large"/></Link>
-            <Link href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram style={{color:"white"}} fontSize="large"/> </Link>
-            <Link href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn style={{color:"white"}}  fontSize="large" /></Link>
+            <Link href="https://github.com/gerex1408" target="_blank" rel="noopener"><GitHub className={classes.icon} fontSize="large"/></Link>
+            <Link href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram className={classes.icon} fontSize="large"/> </Link>
+            <Link href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn className={classes.icon}  fontSize="large" /></Link>
         </div>
       </div>
     </div>
   );
+
 }
 export default WelcomePage;
