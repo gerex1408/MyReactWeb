@@ -1,9 +1,9 @@
 import './App.css';
 import React from 'react';
-import WelcomePage from './WelcomePage';
+import WelcomePage from './Components/WelcomePage';
 import {makeStyles} from '@material-ui/core/styles';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
-import Navbar from './Navbar';
+import Navbar from './Components/Navbar';
 
 const useStyles = makeStyles(theme => ({
   root: {
