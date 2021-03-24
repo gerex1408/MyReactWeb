@@ -4,6 +4,7 @@ import WelcomePage from './Components/WelcomePage';
 import {makeStyles} from '@material-ui/core/styles';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './Components/Navbar';
+import Studies from './Components/Studies';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -11,9 +12,8 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-function App() {
 
-  const classes = useStyles();
+function App() {
 
   return (
     <Router>
@@ -23,7 +23,7 @@ function App() {
           <WelcomePage/>
         </Route>
         <Route exact path="/studies">
-          <h1>This will be the Studies page</h1>
+          <Studies/>
         </Route>
         <Route exact path="/jobexperience">
           <h1>This will be the Job Experience page</h1>

@@ -1,7 +1,7 @@
 import {React} from 'react';
-import myPhoto from './me.jpeg';
+import myPhoto from '../images/me.jpeg';
 import {makeStyles} from '@material-ui/core/styles';
-import { Typography,Link} from '@material-ui/core';
+import { Typography,Link,useMediaQuery} from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
 import {GitHub,Instagram,LinkedIn} from '@material-ui/icons';
 
@@ -54,8 +54,12 @@ function WelcomePage() {
   const props2 = useSpring({to:{opacity: 1,marginTop:0}, from: {opacity: 0,marginTop:200},config: {delay:1000,duration:1000}})
   const props3 = useSpring({to:{opacity: 1}, from: {opacity: 0},config: {delay:1000,duration:1000}})
 
+  const m_size = useMediaQuery('(max-width:1024px)');
+  const s_size = useMediaQuery('(min-width:768px)');
+  const xs_size = useMediaQuery('(min-width:425px)');
+
   return (
-    <div className={classes.root}>
+    <div className={classes.root} style={m_size?{height:"100%"}:null}>
       <div className={classes.presentation}>
         <animated.div  className={classes.figure} style={props}>
             <img className={classes.img} src={myPhoto} alt="Me" />
