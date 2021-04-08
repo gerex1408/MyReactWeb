@@ -1,7 +1,7 @@
 import {React} from 'react';
 import myPhoto from '../images/me.jpeg';
 import {makeStyles} from '@material-ui/core/styles';
-import { Typography,Link,useMediaQuery} from '@material-ui/core';
+import { Typography,Link,useMediaQuery,Button} from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
 import {GitHub,Instagram,LinkedIn} from '@material-ui/icons';
 
@@ -58,6 +58,7 @@ function WelcomePage() {
   const s_size = useMediaQuery('(min-width:768px)');
   const xs_size = useMediaQuery('(min-width:425px)');
 
+
   return (
     <div className={classes.root} style={m_size?{height:"100%"}:null}>
       <div className={classes.presentation}>
@@ -80,6 +81,5 @@ function WelcomePage() {
       </div>
     </div>
   );
-
 }
 export default WelcomePage;
