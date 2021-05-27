@@ -48,7 +48,7 @@ function Skills(){
     const classes = useStyles();
     const m_size = useMediaQuery('(max-width:1024px)'); //portatil size
     const s_size = useMediaQuery('(max-width:768px)'); //tablet size
-    const xs_size = useMediaQuery('(max-width:425px)'); //min mobile size
+    const xs_size = useMediaQuery('(min-width:425px)'); //min mobile size
     const xm_size = useMediaQuery('(max-width:600px)'); //min pc size
     const props = useSpring({to:{opacity: 1}, from: {opacity: 0},config: {delay:2000,duration:2000}})
     
