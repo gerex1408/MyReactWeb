@@ -23,6 +23,7 @@ const useStyles = makeStyles({
     },
     progress:{
         display: "flex",
+        flexDirection:"column",
         alignItems: "center",
         justifyContent: "center",
         textAlign: "center",
@@ -34,7 +35,8 @@ const useStyles = makeStyles({
         fontSize: "2.2em",
         fontWeight: "100",
         color: "#fff",
-        userSelect: "none"
+        userSelect: "none",
+        
     },
     animated:{
         width:"90%"
@@ -46,7 +48,7 @@ function Skills(){
     const classes = useStyles();
     const m_size = useMediaQuery('(max-width:1024px)'); //portatil size
     const s_size = useMediaQuery('(max-width:768px)'); //tablet size
-    const xs_size = useMediaQuery('(max-width:425px)'); //min mobile size
+    const xs_size = useMediaQuery('(min-width:425px)'); //min mobile size
     const xm_size = useMediaQuery('(max-width:600px)'); //min pc size
     const props = useSpring({to:{opacity: 1}, from: {opacity: 0},config: {delay:2000,duration:2000}})
     
@@ -65,9 +67,13 @@ function Skills(){
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiReact color="#61DBFB"/></h2>
+                                <h2 style={{margin:"0"}}><SiReact color="#61DBFB"/></h2>
+                                <h6 style={{margin:"0"}}>85%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -77,14 +83,18 @@ function Skills(){
                                 progress={80}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><FaGitAlt color="#F1502F"/></h2>
+                                <h2 style={{margin:"0"}}><FaGitAlt color="#F1502F"/></h2>
+                                <h6 style={{margin:"0"}}>80%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -94,14 +104,18 @@ function Skills(){
                                 progress={80}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiMysql/></h2>
+                                <h2 style={{margin:"0"}}><SiMysql/></h2>
+                                <h6 style={{margin:"0"}}>80%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -111,14 +125,18 @@ function Skills(){
                                 progress={80}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><DiCss3 color="#2965f1"/></h2>
+                                <h2 style={{margin:"0"}}><DiCss3 color="#2965f1"/></h2>
+                                <h6 style={{margin:"0"}}>80%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -128,14 +146,18 @@ function Skills(){
                                 progress={80}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiJson color="a6a9b6"/></h2>
+                                <h2 style={{margin:"0"}}><SiJson color="a6a9b6"/></h2>
+                                <h6 style={{margin:"0"}}>80%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -145,14 +167,18 @@ function Skills(){
                                 progress={75}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiJavascript color="#f0db4f"/></h2>
+                                <h2 style={{margin:"0"}}><SiJavascript color="#f0db4f"/></h2>
+                                <h6 style={{margin:"0"}}>75%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -162,14 +188,18 @@ function Skills(){
                                 progress={70}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiCplusplus color="28527a"/></h2>
+                                <h2 style={{margin:"0"}}><SiCplusplus color="28527a"/></h2>
+                                <h6 style={{margin:"0"}}>70%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -179,14 +209,18 @@ function Skills(){
                                 progress={70}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><DiHtml5 color="#e34c26" /></h2>
+                                <h2 style={{margin:"0"}}><DiHtml5 color="#e34c26" /></h2>
+                                <h6 style={{margin:"0"}}>70%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -196,14 +230,18 @@ function Skills(){
                                 progress={65}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiSpring color="#b5e550"/></h2>
+                                <h2 style={{margin:"0"}}><SiSpring color="#b5e550"/></h2>
+                                <h6 style={{margin:"0"}}>65%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -213,14 +251,18 @@ function Skills(){
                                 progress={60}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                            <h2><SiJava color="#5382a1"/></h2>
+                            <h2 style={{margin:"0"}}><SiJava color="#5382a1"/></h2>
+                            <h6 style={{margin:"0"}}>60%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -230,14 +272,18 @@ function Skills(){
                                 progress={60}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiUbuntu color="#e95420"/></h2>
+                                <h2 style={{margin:"0"}}><SiUbuntu color="#e95420"/></h2>
+                                <h6 style={{margin:"0"}}>60%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
@@ -247,14 +293,18 @@ function Skills(){
                                 progress={55}
                                 strokeWidth={14}
                                 strokeColor="#ff4c4c"
-                                strokeLinecap="square"
+                                strokeLinecap="butt"
                                 trackStrokeWidth={14}
                                 initialAnimation={true}
                                 transition="1.5s ease 0.5s"
                                 trackTransition="0s ease"
+                                cut={120}
+                                trackStrokeLinecap="butt"
+                                rotate={-210}
                         >
                             <div className={classes.progress}>
-                                <h2><SiGnubash color="#b5e550"/></h2>
+                                <h2 style={{margin:"0"}}><SiGnubash color="#b5e550"/></h2>
+                                <h6 style={{margin:"0"}}>55%</h6>
                             </div>
                         </ProgressBar>
                     </Grid>
