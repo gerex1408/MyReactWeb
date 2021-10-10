@@ -159,7 +159,7 @@ function Studies() {
                             >
                             I am currently pursuing a degree in <b>computer engineering </b>
                             at the University of Girona, also known as <b>UdG</b>. I'm in my
-                            <b> second year</b> of four. I have the feeling that I'm
+                            <b> third year</b> of four. I have the feeling that I'm
                             studying the perfect degree for me, I don't think there's an other one
                             that can make me be more motivated and inspired in learning new things than this one. 
                             </Typography>
@@ -200,7 +200,7 @@ function Studies() {
                             style={{ textAlign: "justify" }}
                             >
                             An important part of my knowledge as a web developer is Udemy, an
-                            online plataform to take coures of any kind. I've completed 3
+                            online plataform to take coures of any kind. I've completed 3 
                             courses, my first one was to learn <b>HTML and CSS</b>, my second
                             one to learn <b>JavaScript</b> and my last one was an{" "}
                             <b>advanced fullStack</b> course of web developing.

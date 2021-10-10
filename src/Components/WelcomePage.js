@@ -68,7 +68,7 @@ function WelcomePage() {
 
         <animated.div style={props2} className={classes.typo}>
             <Typography variant="h5">
-                Welcome to my web page! My name is <b style={{color:"#ff4c4c"}}>Gerard Lozano Trias</b>, I am currently <b style={{color:"#ff4c4c"}}>19 years old</b> and pursuing a degree in <b style={{color:"#ff4c4c"}}>computer engineering</b> at the University of Girona. 
+                Welcome to my web page! My name is <b style={{color:"#ff4c4c"}}>Gerard Lozano Trias</b>, I am currently <b style={{color:"#ff4c4c"}}>20 years old</b> and pursuing a degree in <b style={{color:"#ff4c4c"}}>computer engineering</b> at the University of Girona. 
                 I am passioned with everything related to computer science and programming. <b style={{color:"#ff4c4c"}}>Enjoy browsing this web</b> and learn more about me!
             </Typography>
         </animated.div>
