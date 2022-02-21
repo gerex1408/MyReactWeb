@@ -1,17 +1,11 @@
 import './App.css';
 import React from 'react';
 import WelcomePage from './Components/WelcomePage';
-import {makeStyles} from '@material-ui/core/styles';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Studies from './Components/Studies';
 import Skills from './Components/Skills';
 
-const useStyles = makeStyles(theme => ({
-  root: {
-    flexGrow: 1,
-  },
-}));
 
 
 function App() {
