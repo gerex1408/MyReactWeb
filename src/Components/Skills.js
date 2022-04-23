@@ -1,11 +1,12 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {Grid,useMediaQuery} from '@material-ui/core';
+import {Grid,useMediaQuery,Typography} from '@material-ui/core';
 import ProgressBar from "react-customizable-progressbar";
 import {useSpring, animated} from 'react-spring';
 import {DiHtml5,DiCss3} from 'react-icons/di'
-import {SiCplusplus,SiJavascript,SiReact,SiMysql,SiUbuntu,SiSpring,SiJson, SiGnubash,SiJava} from 'react-icons/si'
+import {SiCplusplus,SiJavascript,SiReact,SiMysql,SiUbuntu,SiSpring, SiGnubash,SiJava,SiPython,SiHaskell,SiBootstrap,SiAndroid,SiDocker,SiWindows,SiApple} from 'react-icons/si'
 import {FaGitAlt} from 'react-icons/fa'
+import SkillComponent from "./SkillComponent";
 
 const useStyles = makeStyles({
     root:{
@@ -16,10 +17,26 @@ const useStyles = makeStyles({
       alignItems:"center",
       justifyContent:"center"
     },
+    leftCell:{
+        display:"flex",
+        flexDirection:'column',
+        alignItems:"center",
+        justifyContent:"center",
+        
+    },
+    rightCell:{
+        display:"flex",
+        flexDirection:'column',
+        alignItems:"center",
+        justifyContent:"center",
+    },
     cell:{
         display:"flex",
         alignItems:"center",
         justifyContent:"center",
+    },
+    animated:{
+        width:"90%",
     },
     progress:{
         display: "flex",
@@ -36,11 +53,12 @@ const useStyles = makeStyles({
         fontWeight: "100",
         color: "#fff",
         userSelect: "none",
-        
     },
-    animated:{
-        width:"90%"
-    }
+    title: {
+        flexGrow: 1,
+        fontFamily:"Montserrat",
+        color:'#fff'
+      },
 });
 
 function Skills(){
@@ -56,257 +74,76 @@ function Skills(){
         <div className={classes.root} style={xm_size?{height:"100%"}:{height:"90vh"}}>
             <animated.div style={props} className={classes.animated}>
                 <Grid container>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={85}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="square"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiReact color="#61DBFB"/></h2>
-                                <h6 style={{margin:"0"}}>85%</h6>
-                            </div>
-                        </ProgressBar>
+                    <Grid item xs={12} sm={12} lg={6} className={classes.leftCell}>
+                        <Typography variant="h6" className={classes.title}>Programming Languages</Typography>
+                        <Grid container >
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={85} icon={<SiJavascript color="#f0db4f"/>} percent={'85%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={80} icon={<SiJava color="#5382a1"/>} percent={'80%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={65} icon={<SiCplusplus color="28527a"/>} percent={'65%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={65} icon={<SiPython color="4b8bbe"/>} percent={'65%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={55} icon={<SiGnubash color="#b5e550"/>} percent={'55%'} /> 
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={40} icon={<SiHaskell color="#5e5086"/>} percent={'40%'} /> 
+                            </Grid>
+                        
+                        </Grid>
+                        <Typography variant="h6" className={classes.title}>Frameworks/Libraries</Typography>
+                        <Grid container >
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={85} icon={<SiReact color="#61DBFB"/>} percent={'85%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={85} icon={<SiSpring color="#b5e550"/>} percent={'85%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={85} icon={<SiBootstrap color="#771ef6"/>} percent={'85%'} />
+                            </Grid>
+                        </Grid>
                     </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={80}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><FaGitAlt color="#F1502F"/></h2>
-                                <h6 style={{margin:"0"}}>80%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={80}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiMysql/></h2>
-                                <h6 style={{margin:"0"}}>80%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={80}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><DiCss3 color="#2965f1"/></h2>
-                                <h6 style={{margin:"0"}}>80%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={80}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiJson color="a6a9b6"/></h2>
-                                <h6 style={{margin:"0"}}>80%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={75}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiJavascript color="#f0db4f"/></h2>
-                                <h6 style={{margin:"0"}}>75%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={70}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiCplusplus color="28527a"/></h2>
-                                <h6 style={{margin:"0"}}>70%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={70}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><DiHtml5 color="#e34c26" /></h2>
-                                <h6 style={{margin:"0"}}>70%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={65}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiSpring color="#b5e550"/></h2>
-                                <h6 style={{margin:"0"}}>65%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={60}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                            <h2 style={{margin:"0"}}><SiJava color="#5382a1"/></h2>
-                            <h6 style={{margin:"0"}}>60%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={60}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiUbuntu color="#e95420"/></h2>
-                                <h6 style={{margin:"0"}}>60%</h6>
-                            </div>
-                        </ProgressBar>
-                    </Grid>
-                    <Grid item xs={12} sm={4} lg={3} className={classes.cell}>
-                        <ProgressBar
-                                radius={s_size?60:80}
-                                progress={55}
-                                strokeWidth={14}
-                                strokeColor="#ff4c4c"
-                                strokeLinecap="butt"
-                                trackStrokeWidth={14}
-                                initialAnimation={true}
-                                transition="1.5s ease 0.5s"
-                                trackTransition="0s ease"
-                                cut={120}
-                                trackStrokeLinecap="butt"
-                                rotate={-210}
-                        >
-                            <div className={classes.progress}>
-                                <h2 style={{margin:"0"}}><SiGnubash color="#b5e550"/></h2>
-                                <h6 style={{margin:"0"}}>55%</h6>
-                            </div>
-                        </ProgressBar>
+                    <Grid item xs={12} sm={12} lg={6} className={classes.rightCell}>
+                        <Typography variant="h6" className={classes.title}>Technologies</Typography>
+                        <Grid container >
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={85} icon={<FaGitAlt color="#F1502F"/>} percent={'85%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={80} icon={<SiMysql/>} percent={'80%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={80} icon={<DiHtml5 color="#e34c26" />} percent={'80%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={80} icon={<DiCss3 color="#2965f1"/>} percent={'80%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={60} icon={<SiAndroid color="#3edc85"/>} percent={'60%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={40} icon={<SiDocker color="#2497ed"/>} percent={'40%'} />
+                            </Grid>
+                        </Grid>
+                        <Typography variant="h6" className={classes.title}>Operative Systems</Typography>
+                        <Grid container >
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={80} icon={<SiUbuntu color="#e95420"/>} percent={'80%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={75} icon={<SiWindows color="#03d1de"/>} percent={'75%'} />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={70} icon={<SiApple />} percent={'70%'} />
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
             </animated.div>
