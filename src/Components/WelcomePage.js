@@ -1,5 +1,6 @@
-import {React} from 'react';
+import {React, useEffect, useRef, useState} from 'react';
 import myPhoto from '../images/me.jpeg';
+import myPhotoSmall from '../images/me_small.jpeg';
 import {makeStyles} from '@material-ui/core/styles';
 import { Typography,Link,useMediaQuery,Button} from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
@@ -18,7 +19,10 @@ const useStyles = makeStyles(theme => ({
   img:{
       borderRadius:"50%",
       height:"300px",
-      width:"300px"
+      width:"300px",
+      '&:hover': {
+        cursor: 'pointer'
+     },
   },
   presentation: {
       textAlign:"center",
@@ -49,6 +53,9 @@ const useStyles = makeStyles(theme => ({
 
 function WelcomePage() {
 
+  const image = useRef(null)
+  const [toggled, isToggled] = useState(false)
+
   const classes = useStyles();
   const props = useSpring({to:{opacity: 1,marginLeft:0}, from: {opacity: 0,marginLeft:-500},config: {delay:1000,duration:1000}})
   const props2 = useSpring({to:{opacity: 1,marginTop:0}, from: {opacity: 0,marginTop:200},config: {delay:1000,duration:1000}})
@@ -58,12 +65,18 @@ function WelcomePage() {
   const s_size = useMediaQuery('(min-width:768px)');
   const xs_size = useMediaQuery('(min-width:425px)');
 
+  function changeImage(){
+    if (!toggled) image.current.src = myPhotoSmall
+    else image.current.src = myPhoto
+    isToggled(!toggled)
+  }
+
 
   return (
     <div className={classes.root} style={m_size?{height:"100%"}:null}>
       <div className={classes.presentation}>
         <animated.div  className={classes.figure} style={props}>
-            <img className={classes.img} src={myPhoto} alt="Me" />
+            <img ref={image} className={classes.img} src={myPhoto} onClick={changeImage} alt="Me" />
         </animated.div >
 
         <animated.div style={props2} className={classes.typo}>

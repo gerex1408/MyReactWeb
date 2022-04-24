@@ -1,0 +1,66 @@
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import {
+  Card,
+  CardActionArea,
+  CardActions,
+  CardContent,
+  CardMedia,
+  Button,
+  Typography,
+} from "@material-ui/core/";
+
+const useStyles = makeStyles({
+  card: {
+    backgroundColor:"#fff",
+    maxHeight:440,
+    maxWidth: 345,
+    marginTop: "30px"
+},
+  media: {
+    height: 140
+  }
+});
+
+function StudyComponent(props){
+    const classes = useStyles();
+
+    return(
+        <Card className={classes.card}>
+            <CardActionArea>
+                <CardMedia
+                    className={classes.media}
+                    image={props.image}
+                    title={props.title}
+                />
+                <CardContent>
+                    <Typography gutterBottom variant="h4" component="h2">
+                    {props.title}
+                    </Typography>
+                    <Typography gutterBottom variant="body1" component="h2" dangerouslySetInnerHTML={{__html: props.years}}>
+                    </Typography>
+                    <Typography
+                    style={{ textAlign: "justify" }}
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                    dangerouslySetInnerHTML={{__html: props.description}}
+                    >
+                    
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+            <CardActions>
+                <Button
+                    target="_blank"
+                    size="small"
+                    color="secondary"
+                    href={props.link}
+                >
+                    Visit the website
+                </Button>
+            </CardActions>
+        </Card>
+    )
+}
+export default StudyComponent

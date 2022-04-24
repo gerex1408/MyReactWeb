@@ -5,6 +5,7 @@ import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import Studies from './Components/Studies';
 import Skills from './Components/Skills';
+import JobExperience from './Components/JobExperience';
 
 
 
@@ -21,13 +22,13 @@ function App() {
           <Studies/>
         </Route>
         <Route exact path="/jobexperience">
-          <h1>This will be the Job Experience page</h1>
+          <JobExperience/>
         </Route>
         <Route exact path="/skills">
           <Skills/>
         </Route>
-        <Route exact path="/contact">
-        <h1>This will be the Contact page</h1>
+        <Route exact path="/projects">
+        <h1>This will be the Projects page</h1>
         </Route>
       </Switch>
     </Router>

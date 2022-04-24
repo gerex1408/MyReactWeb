@@ -38,7 +38,7 @@ function Navbar() {
   const [studies,setStudies]=useState(window.location.pathname==="/studies"?true:false);
   const [jobExp,setjobExp]=useState(window.location.pathname==="/jobexperience"?true:false);
   const [skills,setSkills]=useState(window.location.pathname==="/skills"?true:false);
-  const [contact,setContact]=useState(window.location.pathname==="/contact"?true:false);
+  const [projects,setProjects]=useState(window.location.pathname==="/projects"?true:false);
 
   const history=useHistory();
 
@@ -47,7 +47,7 @@ function Navbar() {
     setStudies(false);
     setjobExp(false);
     setSkills(false);
-    setContact(false);
+    setProjects(false);
   }
 
   useEffect(()=>{
@@ -68,9 +68,9 @@ function Navbar() {
         falseThem();
         setSkills(true);
       }
-      else if(location.pathname==="/contact"){
+      else if(location.pathname==="/projects"){
         falseThem();
-        setContact(true);
+        setProjects(true);
       }
    }) 
   },[history])
@@ -92,7 +92,7 @@ function Navbar() {
   const props = useSpring({to:{opacity: 1,marginTop:0}, from: {opacity: 0,marginTop:-300},config: {delay:500,duration:1000}})
   return (
     <div className={classes.root}>
-      <AppBar position="static" className={classes.nav} style={studies?{backgroundColor:"#323232"}:null}>
+      <AppBar position="static" className={classes.nav} style={studies||jobExp?{backgroundColor:"#323232"}:null}>
         <animated.div style={props}>
           <Toolbar>
             <ThemeProvider theme={theme}>
@@ -105,7 +105,7 @@ function Navbar() {
                   <Link to="/studies" className={classes.link} style={studies?{color:"#ff4c4c"}:{color:"#fff"}}><Button className={classes.menuButton} color="inherit">Studies</Button></Link>
                   <Link to="/jobexperience" className={classes.link} style={jobExp?{color:"#ff4c4c"}:{color:"#fff"}}><Button className={classes.menuButton} color="inherit">Job experience</Button></Link>
                   <Link to="/skills" className={classes.link} style={skills?{color:"#ff4c4c"}:{color:"#fff"}}><Button  className={classes.menuButton} color="inherit">Skills</Button></Link>
-                  <Link to="/contact" className={classes.link} ><Button color={contact?"secondary":"white"}  className={classes.menuButton} size="large" variant="contained">Contact</Button></Link>
+                  <Link to="/projects" className={classes.link} style={projects?{color:"#ff4c4c"}:{color:"#fff"}}><Button  className={classes.menuButton} color="inherit">Projects</Button></Link>
                 </nav>
               ):(
                 <nav>
