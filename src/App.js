@@ -6,6 +6,7 @@ import Navbar from './Components/Navbar';
 import Studies from './Components/Studies';
 import Skills from './Components/Skills';
 import JobExperience from './Components/JobExperience';
+import Projects from './Components/Projects';
 
 
 
@@ -28,7 +29,7 @@ function App() {
           <Skills/>
         </Route>
         <Route exact path="/projects">
-        <h1>This will be the Projects page</h1>
+          <Projects/>
         </Route>
       </Switch>
     </Router>

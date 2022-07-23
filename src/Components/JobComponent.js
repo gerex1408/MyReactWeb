@@ -1,42 +1,44 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import {Box,Card,CardContent,CardMedia,Typography} from "@material-ui/core"
-import amazon from '../images/amazon.png';
+import {Box,Card,CardContent,CardMedia,Typography,CardHeader,IconButton} from "@material-ui/core"
 
 const useStyles = makeStyles({
     card:{
-      height:"250px",
-      display:"flex",
-      width:"600px"
+      height:"fit-content",
+      maxWidth:"600px",
+      margin:"20px"
     },
     cardImage:{
-        flex:1
+        borderRadius:"50%",
+        height:"100px"
     },
+
     cardContent:{
-        flex:4
-    }
+        paddingTop:0
+    },
 })
 
-function JobComponent(){
+function JobComponent(props){
     const classes = useStyles();
 
     return(
         <Card className={classes.card}>
-            <CardMedia
-                className={classes.cardImage}
-                component="img"
-                image={amazon}
-                alt="Amazon"
+             <CardHeader
+                avatar={
+                    <CardMedia
+                    className={classes.cardImage}
+                    component="img"
+                    image={props.image}
+                    alt="Amazon"
+                    />
+                }
+                title={<Typography variant="h5"component="h2">{props.title}</Typography>}
+                subheader={<Typography variant="p" color="textSecondary">{props.subtitle +' '+props.date}</Typography>} 
             />
             <CardContent className={classes.cardContent}>
-                <Typography component="div" variant="h5">
-                    IT Support Engineer
-                </Typography>
-                <Typography variant="subtitle1" color="text.secondary" component="div">
-                    Amazon 
+                <Typography variant="p"  dangerouslySetInnerHTML={{__html: props.description}}>
                 </Typography>
             </CardContent>
-            
         </Card>
     )
 }

@@ -1,10 +1,11 @@
 import {React, useEffect, useRef, useState} from 'react';
-import myPhoto from '../images/me.jpeg';
+import myPhoto from '../images/me.jpg';
 import myPhotoSmall from '../images/me_small.jpeg';
 import {makeStyles} from '@material-ui/core/styles';
 import { Typography,Link,useMediaQuery,Button} from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
 import {GitHub,Instagram,LinkedIn} from '@material-ui/icons';
+import ReactGA from 'react-ga';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -81,7 +82,7 @@ function WelcomePage() {
 
         <animated.div style={props2} className={classes.typo}>
             <Typography variant="h5">
-                Welcome to my web page! My name is <b style={{color:"#ff4c4c"}}>Gerard Lozano Trias</b>, I am currently <b style={{color:"#ff4c4c"}}>20 years old</b> and pursuing a degree in <b style={{color:"#ff4c4c"}}>computer engineering</b> at the University of Girona. 
+                Welcome to my web page! My name is <b style={{color:"#ff4c4c"}}>Gerard Lozano Trias</b>, I am currently <b style={{color:"#ff4c4c"}}>21 years old</b> and pursuing a degree in <b style={{color:"#ff4c4c"}}>computer engineering</b> at the University of Girona. 
                 I am passioned with everything related to computer science and programming. <b style={{color:"#ff4c4c"}}>Enjoy browsing this web</b> and learn more about me!
             </Typography>
         </animated.div>

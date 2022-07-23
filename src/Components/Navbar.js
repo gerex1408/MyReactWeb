@@ -82,6 +82,9 @@ function Navbar() {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const changeLocation = (location)=>{
+    window.location = location
+  }
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -119,11 +122,11 @@ function Navbar() {
                     open={Boolean(anchorEl)}
                     onClose={handleClose}
                   >
-                    <MenuItem onClick={handleClose}>About me</MenuItem>
-                    <MenuItem onClick={handleClose}>Job experience</MenuItem>
-                    <MenuItem onClick={handleClose}>Studies</MenuItem>
-                    <MenuItem onClick={handleClose}>Skills</MenuItem>
-                    <MenuItem onClick={handleClose}>Contact</MenuItem>
+                    <MenuItem onClick={()=>changeLocation('/')}>About me</MenuItem>
+                    <MenuItem onClick={()=>changeLocation('/studies')}>Studies</MenuItem>
+                    <MenuItem onClick={()=>changeLocation('/jobexperience')}>Job experience</MenuItem>
+                    <MenuItem onClick={()=>changeLocation('/skills')}>Skills</MenuItem>
+                    <MenuItem onClick={()=>changeLocation('/projects')}>Projects</MenuItem>
                   </Menu>
                 </nav>
               )

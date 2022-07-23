@@ -4,7 +4,7 @@ import {Grid,useMediaQuery,Typography} from '@material-ui/core';
 import ProgressBar from "react-customizable-progressbar";
 import {useSpring, animated} from 'react-spring';
 import {DiHtml5,DiCss3} from 'react-icons/di'
-import {SiCplusplus,SiJavascript,SiReact,SiMysql,SiUbuntu,SiSpring, SiGnubash,SiJava,SiPython,SiHaskell,SiBootstrap,SiAndroid,SiDocker,SiWindows,SiApple} from 'react-icons/si'
+import {SiCplusplus,SiJavascript,SiReact,SiMysql,SiUbuntu,SiSpring, SiGnubash,SiJava,SiPython,SiHaskell,SiAngular,SiAndroid,SiDocker,SiWindows,SiApple} from 'react-icons/si'
 import {FaGitAlt} from 'react-icons/fa'
 import SkillComponent from "./SkillComponent";
 
@@ -106,7 +106,7 @@ function Skills(){
                                 <SkillComponent size={60} progress={85} icon={<SiSpring color="#b5e550"/>} percent={'85%'} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={85} icon={<SiBootstrap color="#771ef6"/>} percent={'85%'} />
+                                <SkillComponent size={60} progress={85} icon={<SiAngular color="#dd0031"/>} percent={'65%'} />
                             </Grid>
                         </Grid>
                     </Grid>
