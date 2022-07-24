@@ -8,6 +8,7 @@ import {
   CardMedia,
   Button,
   Typography,
+  useMediaQuery
 } from "@material-ui/core/";
 
 const useStyles = makeStyles({
@@ -17,6 +18,10 @@ const useStyles = makeStyles({
     maxWidth: 345,
     marginTop: "30px"
 },
+cardSmall:{
+    backgroundColor:"#fff",
+    margin: "30px"
+},
   media: {
     height: 140
   }
@@ -24,9 +29,10 @@ const useStyles = makeStyles({
 
 function StudyComponent(props){
     const classes = useStyles();
+    const xs_size = useMediaQuery('(min-width:425px)');
 
     return(
-        <Card className={classes.card}>
+        <Card className={xs_size?classes.card:classes.cardSmall}>
             <CardActionArea>
                 <CardMedia
                     className={classes.media}

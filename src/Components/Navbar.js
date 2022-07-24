@@ -1,6 +1,6 @@
 import {React, useState,useEffect} from 'react';
 import {AppBar,Toolbar,Typography,Button,useMediaQuery,IconButton,MenuItem,Menu} from '@material-ui/core';
-import { createMuiTheme, responsiveFontSizes, ThemeProvider, makeStyles } from '@material-ui/core/styles';
+import { createTheme, responsiveFontSizes, ThemeProvider, makeStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import {useSpring, animated} from 'react-spring';
 import {Link} from "react-router-dom";
@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-let theme = createMuiTheme();
+let theme = createTheme();
 theme = responsiveFontSizes(theme);
 
 function Navbar() {
@@ -38,7 +38,6 @@ function Navbar() {
   const [studies,setStudies]=useState(window.location.pathname==="/studies"?true:false);
   const [jobExp,setjobExp]=useState(window.location.pathname==="/jobexperience"?true:false);
   const [skills,setSkills]=useState(window.location.pathname==="/skills"?true:false);
-  const [projects,setProjects]=useState(window.location.pathname==="/projects"?true:false);
 
   const history=useHistory();
 
@@ -47,7 +46,6 @@ function Navbar() {
     setStudies(false);
     setjobExp(false);
     setSkills(false);
-    setProjects(false);
   }
 
   useEffect(()=>{
@@ -67,10 +65,6 @@ function Navbar() {
       else if(location.pathname==="/skills"){
         falseThem();
         setSkills(true);
-      }
-      else if(location.pathname==="/projects"){
-        falseThem();
-        setProjects(true);
       }
    }) 
   },[history])
@@ -99,7 +93,7 @@ function Navbar() {
         <animated.div style={props}>
           <Toolbar>
             <ThemeProvider theme={theme}>
-              <Typography variant="h4" className={classes.title}>Gerard Lozano</Typography>
+              <Typography variant={s_size?'h4':'h6'} className={classes.title}>Gerard Lozano</Typography>
             </ThemeProvider>
             {
               m_size?(
@@ -108,7 +102,6 @@ function Navbar() {
                   <Link to="/studies" className={classes.link} style={studies?{color:"#ff4c4c"}:{color:"#fff"}}><Button className={classes.menuButton} color="inherit">Studies</Button></Link>
                   <Link to="/jobexperience" className={classes.link} style={jobExp?{color:"#ff4c4c"}:{color:"#fff"}}><Button className={classes.menuButton} color="inherit">Job experience</Button></Link>
                   <Link to="/skills" className={classes.link} style={skills?{color:"#ff4c4c"}:{color:"#fff"}}><Button  className={classes.menuButton} color="inherit">Skills</Button></Link>
-                  <Link to="/projects" className={classes.link} style={projects?{color:"#ff4c4c"}:{color:"#fff"}}><Button  className={classes.menuButton} color="inherit">Projects</Button></Link>
                 </nav>
               ):(
                 <nav>
@@ -126,7 +119,6 @@ function Navbar() {
                     <MenuItem onClick={()=>changeLocation('/studies')}>Studies</MenuItem>
                     <MenuItem onClick={()=>changeLocation('/jobexperience')}>Job experience</MenuItem>
                     <MenuItem onClick={()=>changeLocation('/skills')}>Skills</MenuItem>
-                    <MenuItem onClick={()=>changeLocation('/projects')}>Projects</MenuItem>
                   </Menu>
                 </nav>
               )

@@ -52,10 +52,10 @@ function JobExperience (){
             <div className={classes.innerDiv}>
                 <animated.div style={props1} className={classes.innerDiv}>
                     <div className={classes.rowDiv}>
+                        <JobComponent image={additio} title={"Full Stack Developer"} subtitle={"Additio"} date={"06/22-Present"} description={description3} />
                         <JobComponent image={bcds} title={"Research Technician"} subtitle={"Broadband Communications and Distributed Systems"} date={"01/20-5/22"} description={description1} />
-                        <JobComponent image={amazon} title={"IT Support Engineer"} subtitle={"Amazon(BCN1)"} date={"06/21-10/21"} description={description2} />
                     </div>
-                    <JobComponent image={additio} title={"Full Stack Developer"} subtitle={"Additio"} date={"06/22-Present"} description={description3} />
+                    <JobComponent image={amazon} title={"IT Support Engineer"} subtitle={"Amazon(BCN1)"} date={"06/21-10/21"} description={description2} />
                 </animated.div>
             </div>
         </div>

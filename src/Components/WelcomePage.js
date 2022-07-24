@@ -4,7 +4,7 @@ import myPhotoSmall from '../images/me_small.jpeg';
 import {makeStyles} from '@material-ui/core/styles';
 import { Typography,Link,useMediaQuery,Button} from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
-import {GitHub,Instagram,LinkedIn} from '@material-ui/icons';
+import {GitHub,Instagram,LinkedIn, Twitter} from '@material-ui/icons';
 import ReactGA from 'react-ga';
 
 const useStyles = makeStyles(theme => ({
@@ -25,16 +25,24 @@ const useStyles = makeStyles(theme => ({
         cursor: 'pointer'
      },
   },
+  imgSmall:{
+      borderRadius:"50%",
+      height:"200px",
+      width:"200px",
+      '&:hover': {
+        cursor: 'pointer'
+      },
+  },
   presentation: {
       textAlign:"center",
-      height:"100%",
+      height:"85vh",
       display:"flex",
       flexDirection:"column",
       justifyContent:"flex-start"
   },
   typo:{
     color:"white",
-    width:"60%",
+    width:"80%",
     alignSelf:"center"
   },
   socialIcons:{
@@ -49,7 +57,7 @@ const useStyles = makeStyles(theme => ({
     '&:hover':{
       color:"#ff4c4c"
     }
-  }
+  },
 }));
 
 function WelcomePage() {
@@ -77,11 +85,11 @@ function WelcomePage() {
     <div className={classes.root} style={m_size?{height:"100%"}:null}>
       <div className={classes.presentation}>
         <animated.div  className={classes.figure} style={props}>
-            <img ref={image} className={classes.img} src={myPhoto} onClick={changeImage} alt="Me" />
+            <img ref={image} className={s_size?classes.img:classes.imgSmall} src={myPhoto} onClick={changeImage} alt="Me" />
         </animated.div >
 
         <animated.div style={props2} className={classes.typo}>
-            <Typography variant="h5">
+            <Typography variant={s_size?'h5':'body1'}>
                 Welcome to my web page! My name is <b style={{color:"#ff4c4c"}}>Gerard Lozano Trias</b>, I am currently <b style={{color:"#ff4c4c"}}>21 years old</b> and pursuing a degree in <b style={{color:"#ff4c4c"}}>computer engineering</b> at the University of Girona. 
                 I am passioned with everything related to computer science and programming. <b style={{color:"#ff4c4c"}}>Enjoy browsing this web</b> and learn more about me!
             </Typography>
@@ -91,6 +99,7 @@ function WelcomePage() {
             <Link href="https://github.com/gerex1408" target="_blank" rel="noopener"><GitHub className={classes.icon} fontSize="large"/></Link>
             <Link href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram className={classes.icon} fontSize="large"/> </Link>
             <Link href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn className={classes.icon}  fontSize="large" /></Link>
+            <Link href="https://twitter.com/GerardLozano9" target="_blank" rel="noopener"><Twitter className={classes.icon}  fontSize="large" /></Link>
         </animated.div>
       </div>
     </div>

@@ -10,7 +10,8 @@ const useStyles = makeStyles({
     },
     cardImage:{
         borderRadius:"50%",
-        height:"100px"
+        height:"100px",
+        width:"100px"
     },
 
     cardContent:{
@@ -29,7 +30,6 @@ function JobComponent(props){
                     className={classes.cardImage}
                     component="img"
                     image={props.image}
-                    alt="Amazon"
                     />
                 }
                 title={<Typography variant="h5"component="h2">{props.title}</Typography>}
