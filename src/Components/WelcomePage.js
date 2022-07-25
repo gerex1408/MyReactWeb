@@ -5,7 +5,7 @@ import {makeStyles} from '@material-ui/core/styles';
 import { Typography,Link,useMediaQuery,Button} from '@material-ui/core';
 import {useSpring, animated} from 'react-spring';
 import {GitHub,Instagram,LinkedIn, Twitter} from '@material-ui/icons';
-import ReactGA from 'react-ga';
+import ReactGA from 'react-ga4';
 
 const useStyles = makeStyles(theme => ({
   root: {
