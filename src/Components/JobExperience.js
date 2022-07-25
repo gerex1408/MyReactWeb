@@ -39,8 +39,10 @@ function JobExperience (){
     const props1 = useSpring({to:{opacity: 1,marginTop:0}, from: {opacity: 0,marginTop:200},config: {delay:1000,duration:1000}})
 
     const m_size = useMediaQuery('(max-width:1024px)');
-    const s_size = useMediaQuery('(min-width:768px)');
+    const s_size = useMediaQuery('(max-width:768px)');
     const xs_size = useMediaQuery('(min-width:425px)');
+
+    const s_size_height = useMediaQuery('(max-height:880px)');
 
 
     const description1= "<ul><li>I developed the whole BCDS new web page with React.js , SpringBoot and MariaDB</li><li>I contributed to the development of the NRS (Network Research Simulator).</li><li>I did research work about graph metrics and robustness of networks</li><li>I designed and developed a web page for ReUseMP3 project in collaboration with ICRA (Institut Català de Recerca de l'Aigua)</li></ul>"
@@ -48,7 +50,7 @@ function JobExperience (){
     const description3= "As a Software developer I am engaged in several projects and tasks to make Additio the best teaching and communication app in the software market. I mainly work on the front end part of the web application with technologies such as React and Angularjs."
 
     return(
-        <div className={classes.root} style={m_size?{height:"100%"}:null}>
+        <div className={classes.root} style={s_size_height||m_size?{height:"100%"}:{height:"90vh"}}>
             <div className={classes.innerDiv}>
                 <animated.div style={props1} className={classes.innerDiv}>
                     <div className={classes.rowDiv}>

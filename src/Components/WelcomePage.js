@@ -74,6 +74,9 @@ function WelcomePage() {
   const s_size = useMediaQuery('(min-width:768px)');
   const xs_size = useMediaQuery('(min-width:425px)');
 
+  const s_size_height = useMediaQuery('(max-height:880px)');
+
+
   function changeImage(){
     if (!toggled) image.current.src = myPhotoSmall
     else image.current.src = myPhoto
@@ -82,7 +85,7 @@ function WelcomePage() {
 
 
   return (
-    <div className={classes.root} style={m_size?{height:"100%"}:null}>
+    <div className={classes.root} style={s_size_height||m_size?{height:"100%"}:{height:"90vh"}}>
       <div className={classes.presentation}>
         <animated.div  className={classes.figure} style={props}>
             <img ref={image} className={s_size?classes.img:classes.imgSmall} src={myPhoto} onClick={changeImage} alt="Me" />
