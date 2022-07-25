@@ -77,6 +77,10 @@ function WelcomePage() {
   const s_size_height = useMediaQuery('(max-height:880px)');
 
 
+  useEffect(()=>{
+    ReactGA.send("/");
+  })
+
   function changeImage(){
     if (!toggled) image.current.src = myPhotoSmall
     else image.current.src = myPhoto
