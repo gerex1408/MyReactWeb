@@ -50,10 +50,6 @@ function Navbar() {
     setSkills(false);
   }
 
-  useEffect(() => {
-    ReactGA.initialize('G-YK1SVKG2Y1');
-  }, []);
-
   useEffect(()=>{
     return history.listen((location) => { 
       if(location.pathname==="/"){

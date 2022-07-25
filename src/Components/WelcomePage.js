@@ -76,24 +76,12 @@ function WelcomePage() {
 
   const s_size_height = useMediaQuery('(max-height:880px)');
 
-  useEffect(() => {
-    ReactGA.pageview('/');
-  }, []);
-
 
   function changeImage(){
     if (!toggled) image.current.src = myPhotoSmall
     else image.current.src = myPhoto
     isToggled(!toggled)
   }
-
-  function reportClick(socialMedia){
-    ReactGA.event({
-      category: 'Click registrado',
-      action: socialMedia,
-    });
-  }
-
 
   return (
     <div className={classes.root} style={s_size_height||m_size?{height:"100%"}:{height:"90vh"}}>
