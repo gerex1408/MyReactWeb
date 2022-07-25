@@ -110,9 +110,9 @@ function WelcomePage() {
 
         <animated.div style={props3} className={classes.socialIcons}>
             <Link onClick={()=>returnClick('github')}  href="https://github.com/gerex1408" target="_blank" rel="noopener"><GitHub className={classes.icon} fontSize="large"/></Link>
-            <Link  href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram className={classes.icon} fontSize="large"/> </Link>
-            <Link  href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn className={classes.icon}  fontSize="large" /></Link>
-            <Link  href="https://twitter.com/GerardLozano9" target="_blank" rel="noopener"><Twitter className={classes.icon}  fontSize="large" /></Link>
+            <Link onClick={()=>returnClick('instagram')} href="https://www.instagram.com/lozaniki_/?hl=es" target="_blank" rel="noopener"><Instagram className={classes.icon} fontSize="large"/> </Link>
+            <Link onClick={()=>returnClick('linkedin')} href="https://www.linkedin.com/in/gerardlozanotrias/" target="_blank" rel="noopener"><LinkedIn className={classes.icon}  fontSize="large" /></Link>
+            <Link onClick={()=>returnClick('twitter')} href="https://twitter.com/GerardLozano9" target="_blank" rel="noopener"><Twitter className={classes.icon}  fontSize="large" /></Link>
         </animated.div>
       </div>
     </div>
