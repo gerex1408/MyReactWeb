@@ -78,7 +78,7 @@ function WelcomePage() {
 
 
   useEffect(()=>{
-    ReactGA.send("/");
+    ReactGA.send({ hitType: "pageview", page: "/" });
   })
 
   function changeImage(){
