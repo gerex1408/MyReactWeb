@@ -5,6 +5,8 @@ import MenuIcon from '@material-ui/icons/Menu';
 import {useSpring, animated} from 'react-spring';
 import {Link} from "react-router-dom";
 import { useHistory } from 'react-router-dom';
+import ReactGA from 'react-ga';
+
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -47,6 +49,10 @@ function Navbar() {
     setjobExp(false);
     setSkills(false);
   }
+
+  useEffect(() => {
+    ReactGA.initialize('G-YK1SVKG2Y1');
+  }, []);
 
   useEffect(()=>{
     return history.listen((location) => { 
