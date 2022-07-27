@@ -78,35 +78,35 @@ function Skills(){
                         <Typography variant="h6" className={classes.title}>Programming Languages</Typography>
                         <Grid container >
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={85} icon={<SiJavascript color="#f0db4f"/>} percent={'85%'} />
+                                <SkillComponent size={60} progress={85} icon={<SiJavascript color="#f0db4f"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={80} icon={<SiJava color="#5382a1"/>} percent={'80%'} />
+                                <SkillComponent size={60} progress={80} icon={<SiJava color="#5382a1"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={65} icon={<SiCplusplus color="28527a"/>} percent={'65%'} />
+                                <SkillComponent size={60} progress={65} icon={<SiCplusplus color="28527a"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={65} icon={<SiPython color="4b8bbe"/>} percent={'65%'} />
+                                <SkillComponent size={60} progress={65} icon={<SiPython color="4b8bbe"/>}  />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={55} icon={<SiGnubash color="#b5e550"/>} percent={'55%'} /> 
+                                <SkillComponent size={60} progress={55} icon={<SiGnubash color="#b5e550"/>} /> 
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={40} icon={<SiHaskell color="#5e5086"/>} percent={'40%'} /> 
+                                <SkillComponent size={60} progress={40} icon={<SiHaskell color="#5e5086"/>}  /> 
                             </Grid>
                         
                         </Grid>
                         <Typography variant="h6" className={classes.title}>Frameworks/Libraries</Typography>
                         <Grid container >
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={85} icon={<SiReact color="#61DBFB"/>} percent={'85%'} />
+                                <SkillComponent size={60} progress={85} icon={<SiReact color="#61DBFB"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={85} icon={<SiSpring color="#b5e550"/>} percent={'85%'} />
+                                <SkillComponent size={60} progress={85} icon={<SiSpring color="#b5e550"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={85} icon={<SiAngular color="#dd0031"/>} percent={'65%'} />
+                                <SkillComponent size={60} progress={85} icon={<SiAngular color="#dd0031"/>} />
                             </Grid>
                         </Grid>
                     </Grid>
@@ -114,34 +114,34 @@ function Skills(){
                         <Typography variant="h6" className={classes.title}>Technologies</Typography>
                         <Grid container >
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={85} icon={<FaGitAlt color="#F1502F"/>} percent={'85%'} />
+                                <SkillComponent size={60} progress={85} icon={<FaGitAlt color="#F1502F"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={80} icon={<SiMysql/>} percent={'80%'} />
+                                <SkillComponent size={60} progress={80} icon={<SiMysql/>}  />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={80} icon={<DiHtml5 color="#e34c26" />} percent={'80%'} />
+                                <SkillComponent size={60} progress={80} icon={<DiHtml5 color="#e34c26" />}  />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={80} icon={<DiCss3 color="#2965f1"/>} percent={'80%'} />
+                                <SkillComponent size={60} progress={80} icon={<DiCss3 color="#2965f1"/>}  />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={60} icon={<SiAndroid color="#3edc85"/>} percent={'60%'} />
+                                <SkillComponent size={60} progress={60} icon={<SiAndroid color="#3edc85"/>}  />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={40} icon={<SiDocker color="#2497ed"/>} percent={'40%'} />
+                                <SkillComponent size={60} progress={40} icon={<SiDocker color="#2497ed"/>}  />
                             </Grid>
                         </Grid>
                         <Typography variant="h6" className={classes.title}>Operative Systems</Typography>
                         <Grid container >
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={80} icon={<SiUbuntu color="#e95420"/>} percent={'80%'} />
+                                <SkillComponent size={60} progress={80} icon={<SiUbuntu color="#e95420"/>}  />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={75} icon={<SiWindows color="#03d1de"/>} percent={'75%'} />
+                                <SkillComponent size={60} progress={75} icon={<SiWindows color="#03d1de"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={70} icon={<SiApple />} percent={'70%'} />
+                                <SkillComponent size={60} progress={70} icon={<SiApple />}  />
                             </Grid>
                         </Grid>
                     </Grid>

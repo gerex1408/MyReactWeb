@@ -40,8 +40,7 @@ function SkillComponent (props){
             rotate={-210}
         >
             <div className={classes.progress}>
-                <h4 style={{margin:"0"}}>{props.icon}</h4>
-                <h6 style={{margin:"0"}}>{props.percent}</h6>
+                <h3 style={{margin:"0"}}>{props.icon}</h3>
             </div>
         </ProgressBar>
     )
