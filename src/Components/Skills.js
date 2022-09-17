@@ -4,7 +4,7 @@ import {Grid,useMediaQuery,Typography} from '@material-ui/core';
 import ProgressBar from "react-customizable-progressbar";
 import {useSpring, animated} from 'react-spring';
 import {DiHtml5,DiCss3} from 'react-icons/di'
-import {SiCplusplus,SiJavascript,SiReact,SiMysql,SiUbuntu,SiSpring, SiGnubash,SiJava,SiPython,SiHaskell,SiAngular,SiAndroid,SiDocker,SiWindows,SiApple} from 'react-icons/si'
+import {SiCplusplus,SiJavascript,SiReact,SiMysql,SiUbuntu,SiNextdotjs, SiGnubash,SiJava,SiPython,SiHaskell,SiAngular,SiAndroid,SiDocker,SiWindows,SiApple} from 'react-icons/si'
 import {FaGitAlt} from 'react-icons/fa'
 import SkillComponent from "./SkillComponent";
 
@@ -103,7 +103,7 @@ function Skills(){
                                 <SkillComponent size={60} progress={85} icon={<SiReact color="#61DBFB"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={85} icon={<SiSpring color="#b5e550"/>} />
+                                <SkillComponent size={60} progress={85} icon={<SiNextdotjs color="#fff"/>} />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
                                 <SkillComponent size={60} progress={85} icon={<SiAngular color="#dd0031"/>} />
@@ -135,13 +135,13 @@ function Skills(){
                         <Typography variant="h6" className={classes.title}>Operative Systems</Typography>
                         <Grid container >
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={80} icon={<SiUbuntu color="#e95420"/>}  />
+                                <SkillComponent size={60} progress={85} icon={<SiUbuntu color="#e95420"/>}  />
+                            </Grid>
+                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
+                                <SkillComponent size={60} progress={80} icon={<SiApple />}  />
                             </Grid>
                             <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
                                 <SkillComponent size={60} progress={75} icon={<SiWindows color="#03d1de"/>} />
-                            </Grid>
-                            <Grid item xs={12} sm={4} lg={4} className={classes.cell}>
-                                <SkillComponent size={60} progress={70} icon={<SiApple />}  />
                             </Grid>
                         </Grid>
                     </Grid>

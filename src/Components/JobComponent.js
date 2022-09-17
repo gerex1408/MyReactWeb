@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     },
     cardImage:{
         borderRadius:"50%",
+        boxShadow: "0px 0px 18px 1px black",
         height:"100px",
         width:"100px"
     },

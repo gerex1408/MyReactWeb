@@ -41,13 +41,16 @@ function Studies() {
   const s_size = useMediaQuery('(min-width:768px)');
   const xs_size = useMediaQuery('(min-width:425px)');
 
+  const s_size_height = useMediaQuery('(max-height:880px)');
+
+
   const description1 = "I spent 15 years studying in Maristes Girona, including primary and high school. I decided to take the <b>technology branch</b> in high school and that was one of the best decisions that I have taken so far. I am so proud of my education and my best <b>childhood memories </b> are in Maristes."
   const description2 = "EOI stands for <b>Official school of languages</b> in Spanish. It is a public center were you can learn a bunch of languages. In my case, the EOI was the most important part of my <b>English education</b>, I got my <b>C1 level certificate</b> there. I've always been into trying to master English so I can work abroad one day."
   const description3 = "I am currently pursuing my <b>last year</b> of <b>computer engineering </b> at the University of Girona, also known as <b>UdG</b>. I have the feeling that I'm studying the perfect degree for me, I don't think there's an other one that can make me be more motivated and inspired in learning new things than this one."
   const description4 = "An important part of my knowledge as a web developer is Udemy, an online plataform to take coures of any kind. I've completed 3  courses, my first one was to learn <b>HTML and CSS</b>, my second one to learn <b>JavaScript</b> and my last one was an <b>advanced fullStack</b> course of web developing."
 
   return (
-    <div className={classes.root} style={m_size?{height:"100%"}:null}>
+    <div className={classes.root} style={s_size_height||m_size?{height:"100%"}:{height:"90vh"}}>
         <div className={classes.innerDiv}>
 
             <animated.div style={props1}>
